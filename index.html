@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="https://www.facebook.com/jonatan.santacruz" target="_blank">Facebook</a></li>
+        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        <li><a href="https://github.com/JonatanSCS" target="_blank">Github</a></li>
+        <li><a href="google.com">Otro</a></li>
+    </ul>
+    <a id="jalar" href="#"><img src="img/nav-icon.png"></a>
+</nav>
+<article>
+    <h1>RESPONSIVE MENU</h1>
+</article>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+//Funcion que permite bajar y subir el menu con onclick
+$(function() {
+    var jalar = $('#jalar');
+    menu = $('nav ul');
+    menuAltura = menu.height();
+
+    $(jalar).on('click', function(e) {
+        
+        menu.slideToggle();
+    });
+});
+//Funcion que (si menu esta oculto) remueve la accion anterior onclick
+$(window).resize(function(){
+    var ventana = $(window).width();
+    if(ventana > 320 && menu.is(':hidden')) {
+        menu.removeAttr('style');
+    }
+});
+</script>
+
+</body>
+</html>

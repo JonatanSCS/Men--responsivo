@@ -1,0 +1,88 @@
+/* Clearfix */
+
+body{
+    background: #3498db;
+    font-family:'Shadows Into Light', cursive;
+    
+}
+h1{
+    font-size: 70px;
+    text-align: center;
+}
+
+
+nav {
+    background: #2ecc71;
+    height: 40px;
+    width: 100%;
+   
+    padding-top: 3%;
+    padding-bottom: 3%;
+    float: left;
+
+}
+
+nav ul {
+    height: 40px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 600px;
+
+}
+
+nav li {
+    display: inline;
+    float: left;
+    text-align: center;
+}
+
+nav a {
+    color: #8e44ad;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+
+
+}
+
+
+
+@media only screen and (max-width : 550px) {
+    h1{
+        font-size: 40px;
+    }
+    nav {
+        border-bottom: 0;
+        float: right;
+        height: auto;
+    }
+
+    nav ul {
+        display: none;
+        height: 10%;
+        height: auto;
+        width: 100%;
+    }
+
+    nav li {
+        float: left;
+        position: relative;
+        width: 50%;
+    }
+
+    nav a {
+        font-size: 17px;
+        font-weight: 700;
+        text-align: left;
+        text-indent: 25px;
+        width: 150px;
+    } 
+}
+@media only screen and (min-width : 550px) {
+    img{
+        display: none;
+    }
